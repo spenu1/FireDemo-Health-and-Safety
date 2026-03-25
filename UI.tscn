@@ -1,0 +1,91 @@
+[gd_scene format=3 uid="uid://ckxajhgc78a5q"]
+
+[ext_resource type="Script" uid="uid://bwqbounricf22" path="res://ui.gd" id="1_b3bc3"]
+
+[node name="Control" type="Control" unique_id=699872417]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_b3bc3")
+
+[node name="FuelSlider" type="HSlider" parent="." unique_id=152625574]
+layout_mode = 0
+offset_left = -113.0
+offset_top = -56.0
+offset_right = 184.0
+offset_bottom = -40.0
+rounded = true
+tick_count = 1
+
+[node name="ColorRect" type="ColorRect" parent="FuelSlider" unique_id=1812800004]
+layout_mode = 0
+offset_left = -49.0
+offset_top = -12.0
+offset_right = -8.0
+offset_bottom = 25.0
+
+[node name="Label" type="Label" parent="FuelSlider/ColorRect" unique_id=1938376864]
+layout_mode = 0
+offset_left = 3.0
+offset_top = 7.0
+offset_right = 43.0
+offset_bottom = 30.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+text = "Fuel"
+
+[node name="Heat" type="HSlider" parent="." unique_id=380087786]
+layout_mode = 0
+offset_left = -113.0
+offset_top = -1.0
+offset_right = 184.0
+offset_bottom = 15.0
+rounded = true
+tick_count = 1
+
+[node name="ColorRect" type="ColorRect" parent="Heat" unique_id=251942135]
+layout_mode = 0
+offset_left = -49.0
+offset_top = -12.0
+offset_right = -8.0
+offset_bottom = 25.0
+
+[node name="Label" type="Label" parent="Heat/ColorRect" unique_id=1810268136]
+layout_mode = 0
+offset_left = 3.0
+offset_top = 7.0
+offset_right = 43.0
+offset_bottom = 30.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+text = "Heat"
+
+[node name="Oxygen" type="HSlider" parent="." unique_id=1537447974]
+layout_mode = 0
+offset_left = -113.0
+offset_top = 48.0
+offset_right = 184.0
+offset_bottom = 64.0
+rounded = true
+tick_count = 1
+
+[node name="ColorRect" type="ColorRect" parent="Oxygen" unique_id=223915705]
+layout_mode = 0
+offset_left = -49.0
+offset_top = -12.0
+offset_right = -8.0
+offset_bottom = 25.0
+
+[node name="Label" type="Label" parent="Oxygen/ColorRect" unique_id=441417499]
+layout_mode = 0
+offset_left = 3.0
+offset_top = 7.0
+offset_right = 43.0
+offset_bottom = 30.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+text = "O2"
+
+[connection signal="value_changed" from="FuelSlider" to="." method="_on_fuel_slider_value_changed"]
+[connection signal="value_changed" from="Heat" to="." method="_on_heat_value_changed"]
+[connection signal="value_changed" from="Oxygen" to="." method="_on_oxygen_value_changed"]
