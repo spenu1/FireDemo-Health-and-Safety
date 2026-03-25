@@ -8,6 +8,7 @@
 [ext_resource type="Texture2D" uid="uid://pmv825eyt7y6" path="res://CustomFire.png" id="3_fos0i"]
 
 [sub_resource type="Gradient" id="Gradient_3dxm6"]
+offsets = PackedFloat32Array(0.40250698, 1)
 colors = PackedColorArray(1, 0.5647059, 0, 1, 1, 0, 0, 1)
 
 [sub_resource type="GradientTexture1D" id="GradientTexture1D_lgr22"]
@@ -36,6 +37,8 @@ scale_max = 0.59999996
 scale_curve = SubResource("CurveTexture_3dxm6")
 color = Color(1, 1, 1, 0.8745098)
 color_ramp = SubResource("GradientTexture1D_lgr22")
+hue_variation_min = -2.2351742e-08
+hue_variation_max = 0.06999998
 turbulence_noise_scale = 10.0
 
 [node name="Node2D" type="Node2D" unique_id=561405790]
@@ -51,6 +54,7 @@ region_rect = Rect2(60.446045, 178.82672, 693.3076, 442.23322)
 [node name="GPUParticles2D" type="GPUParticles2D" parent="LogClipart" unique_id=13362136]
 position = Vector2(2.5477695, -168.22386)
 scale = Vector2(10.739731, 10.837612)
+emitting = false
 amount = 30
 texture = ExtResource("3_3dxm6")
 explosiveness = 0.03
