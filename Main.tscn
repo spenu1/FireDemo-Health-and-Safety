@@ -32,7 +32,7 @@ region_rect = Rect2(60.446045, 178.82672, 693.3076, 442.23322)
 [node name="GPUParticles2D" type="GPUParticles2D" parent="LogClipart" unique_id=13362136]
 position = Vector2(18.887451, -33.1577)
 scale = Vector2(4.851532, 8.232577)
-amount = 20
+amount = 10
 texture = ExtResource("3_fos0i")
 process_material = SubResource("ParticleProcessMaterial_uu6xs")
 script = ExtResource("2_r0du0")
