@@ -4,11 +4,18 @@
 [ext_resource type="Texture2D" uid="uid://dlq88a3744247" path="res://log-clipart.png" id="2_fos0i"]
 [ext_resource type="Script" uid="uid://cqg3mx0vddg3j" path="res://gpu_particles_2d.gd" id="2_r0du0"]
 [ext_resource type="PackedScene" uid="uid://ckxajhgc78a5q" path="res://UI.tscn" id="2_uu6xs"]
+[ext_resource type="Texture2D" uid="uid://d38uxsxubdyqn" path="res://BallSprite.png" id="3_3dxm6"]
 [ext_resource type="Texture2D" uid="uid://pmv825eyt7y6" path="res://CustomFire.png" id="3_fos0i"]
+
+[sub_resource type="Gradient" id="Gradient_3dxm6"]
+colors = PackedColorArray(1, 0.5647059, 0, 1, 1, 0, 0, 1)
+
+[sub_resource type="GradientTexture1D" id="GradientTexture1D_lgr22"]
+gradient = SubResource("Gradient_3dxm6")
 
 [sub_resource type="Curve" id="Curve_fos0i"]
 _limits = [0.0, 2.0, 0.0, 1.0]
-_data = [Vector2(0.14, 1.415), 0.0, 0.0, 0, 0, Vector2(0.335, 0), -7.2564096, 0.0, 1, 0]
+_data = [Vector2(0.27040818, 1.3961546), 0.0, 0.0, 0, 0, Vector2(1, 0.010279655), -1.899521, 0.0, 1, 0]
 point_count = 2
 
 [sub_resource type="CurveTexture" id="CurveTexture_3dxm6"]
@@ -24,12 +31,11 @@ direction = Vector3(0, -1, 0)
 angular_velocity_min = -77.95001
 angular_velocity_max = 77.94998
 gravity = Vector3(0, -700, 0)
-scale_min = 0.099999994
-scale_max = 0.19999999
+scale_min = 0.5
+scale_max = 0.59999996
 scale_curve = SubResource("CurveTexture_3dxm6")
-scale_over_velocity_max = 23.92
-hue_variation_min = 0.059999976
-hue_variation_max = 0.16999997
+color = Color(1, 1, 1, 0.8745098)
+color_ramp = SubResource("GradientTexture1D_lgr22")
 turbulence_noise_scale = 10.0
 
 [node name="Node2D" type="Node2D" unique_id=561405790]
@@ -43,11 +49,11 @@ region_enabled = true
 region_rect = Rect2(60.446045, 178.82672, 693.3076, 442.23322)
 
 [node name="GPUParticles2D" type="GPUParticles2D" parent="LogClipart" unique_id=13362136]
-position = Vector2(17.834536, -19.791054)
-scale = Vector2(7.471561, 12.627191)
-amount = 50
-texture = ExtResource("3_fos0i")
-lifetime = 3.0
+position = Vector2(2.5477695, -168.22386)
+scale = Vector2(10.739731, 10.837612)
+amount = 30
+texture = ExtResource("3_3dxm6")
+explosiveness = 0.03
 process_material = SubResource("ParticleProcessMaterial_uu6xs")
 script = ExtResource("2_r0du0")
 

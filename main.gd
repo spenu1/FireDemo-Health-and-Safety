@@ -35,11 +35,13 @@ func calcStrength() -> void:
 		strength = (fuel+heat+oxy)/3
 		particleEmitter.amount_ratio = strength/100
 		fireSprite.modulate.a = (strength-20)/100
+		res://Main.tscn::CurveTexture_3dxm6"e_3dxm6".set_point_offset(1, strength/100)
 		pass
 	pass
 
 func _on_control_fuel_updated(number) -> void:
 	fuel = number
+	
 	calcStrength()
 	pass # Replace with function body.
 
