@@ -7,12 +7,15 @@ var heat = 0
 var strength = 0
 
 var particleEmitter
+var fireSprite
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
 	particleEmitter = $LogClipart/GPUParticles2D
+	fireSprite = $Fire
 	particleEmitter.amount = 0
 	particleEmitter.emitting = false
+	fireSprite.modulate.a = 0
 	pass # Replace with function body.
 
 
@@ -31,6 +34,7 @@ func calcStrength() -> void:
 		particleEmitter.emitting = true
 		strength = (fuel+heat+oxy)/3
 		particleEmitter.amount_ratio = strength/100
+		fireSprite.modulate.a = (strength-20)/100
 		pass
 	pass
 

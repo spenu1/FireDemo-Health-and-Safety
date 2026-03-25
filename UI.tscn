@@ -13,10 +13,11 @@ script = ExtResource("1_b3bc3")
 
 [node name="FuelSlider" type="HSlider" parent="." unique_id=152625574]
 layout_mode = 0
-offset_left = -113.0
-offset_top = -56.0
-offset_right = 184.0
-offset_bottom = -40.0
+offset_left = -364.0
+offset_top = -157.0
+offset_right = -67.0
+offset_bottom = -141.0
+scale = Vector2(2.615, 2.615)
 rounded = true
 tick_count = 1
 
@@ -38,10 +39,11 @@ text = "Fuel"
 
 [node name="Heat" type="HSlider" parent="." unique_id=380087786]
 layout_mode = 0
-offset_left = -113.0
-offset_top = -1.0
-offset_right = 184.0
-offset_bottom = 15.0
+offset_left = -364.0
+offset_top = -22.0
+offset_right = -67.76483
+offset_bottom = -6.0
+scale = Vector2(2.615, 2.615)
 rounded = true
 tick_count = 1
 
@@ -63,10 +65,11 @@ text = "Heat"
 
 [node name="Oxygen" type="HSlider" parent="." unique_id=1537447974]
 layout_mode = 0
-offset_left = -113.0
-offset_top = 48.0
-offset_right = 184.0
-offset_bottom = 64.0
+offset_left = -364.0
+offset_top = 114.0
+offset_right = -67.0
+offset_bottom = 130.0
+scale = Vector2(2.615, 2.615)
 rounded = true
 tick_count = 1
 
