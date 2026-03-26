@@ -1,6 +1,7 @@
 [gd_scene format=3 uid="uid://ckxajhgc78a5q"]
 
 [ext_resource type="Script" uid="uid://bwqbounricf22" path="res://ui.gd" id="1_b3bc3"]
+[ext_resource type="Texture2D" uid="uid://isvprueob5cj" path="res://labelIcon.png" id="2_3b2b5"]
 
 [node name="Control" type="Control" unique_id=699872417]
 layout_mode = 3
@@ -13,28 +14,26 @@ script = ExtResource("1_b3bc3")
 
 [node name="FuelSlider" type="HSlider" parent="." unique_id=152625574]
 layout_mode = 0
-offset_left = -364.0
-offset_top = -157.0
-offset_right = -67.0
-offset_bottom = -141.0
+offset_left = -361.00003
+offset_top = -147.0
+offset_right = -64.00003
+offset_bottom = -131.0
 scale = Vector2(2.615, 2.615)
 rounded = true
 tick_count = 1
 
-[node name="ColorRect" type="ColorRect" parent="FuelSlider" unique_id=1812800004]
-layout_mode = 0
-offset_left = -49.0
-offset_top = -12.0
-offset_right = -8.0
-offset_bottom = 25.0
+[node name="ColorRect" type="Sprite2D" parent="FuelSlider" unique_id=492415691]
+position = Vector2(-50.47799, 8.030598)
+scale = Vector2(0.09394141, 0.09394141)
+texture = ExtResource("2_3b2b5")
 
 [node name="Label" type="Label" parent="FuelSlider/ColorRect" unique_id=1938376864]
-layout_mode = 0
-offset_left = 3.0
-offset_top = 7.0
-offset_right = 43.0
-offset_bottom = 30.0
+offset_left = -203.95157
+offset_top = -135.96774
+offset_right = 201.04843
+offset_bottom = 143.19891
 theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 200
 text = "Fuel"
 
 [node name="Heat" type="HSlider" parent="." unique_id=380087786]
@@ -47,47 +46,45 @@ scale = Vector2(2.615, 2.615)
 rounded = true
 tick_count = 1
 
-[node name="ColorRect" type="ColorRect" parent="Heat" unique_id=251942135]
-layout_mode = 0
-offset_left = -49.0
-offset_top = -12.0
-offset_right = -8.0
-offset_bottom = 25.0
+[node name="ColorRect" type="Sprite2D" parent="Heat" unique_id=1853260652]
+position = Vector2(-49.330795, 9.17782)
+scale = Vector2(0.09393964, 0.09393964)
+texture = ExtResource("2_3b2b5")
 
-[node name="Label" type="Label" parent="Heat/ColorRect" unique_id=1810268136]
-layout_mode = 0
-offset_left = 3.0
-offset_top = 7.0
-offset_right = 43.0
-offset_bottom = 30.0
+[node name="Label" type="Label" parent="Heat/ColorRect" unique_id=1590200999]
+offset_left = -227.9644
+offset_top = -134.33629
+offset_right = 233.0356
+offset_bottom = 144.83037
 theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 200
 text = "Heat"
+metadata/_edit_use_anchors_ = true
 
 [node name="Oxygen" type="HSlider" parent="." unique_id=1537447974]
 layout_mode = 0
 offset_left = -364.0
-offset_top = 114.0
+offset_top = 113.00001
 offset_right = -67.0
-offset_bottom = 130.0
+offset_bottom = 129.0
 scale = Vector2(2.615, 2.615)
 rounded = true
 tick_count = 1
 
-[node name="ColorRect" type="ColorRect" parent="Oxygen" unique_id=223915705]
-layout_mode = 0
-offset_left = -49.0
-offset_top = -12.0
-offset_right = -8.0
-offset_bottom = 25.0
+[node name="ColorRect" type="Sprite2D" parent="Oxygen" unique_id=1173609359]
+position = Vector2(-48.18355, 4.5889106)
+scale = Vector2(0.09684929, 0.09684929)
+texture = ExtResource("2_3b2b5")
 
-[node name="Label" type="Label" parent="Oxygen/ColorRect" unique_id=441417499]
-layout_mode = 0
-offset_left = 3.0
-offset_top = 7.0
-offset_right = 43.0
-offset_bottom = 30.0
+[node name="Label" type="Label" parent="Oxygen/ColorRect" unique_id=495030162]
+offset_left = -165.83691
+offset_top = -134.24889
+offset_right = 239.16309
+offset_bottom = 144.91777
 theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 200
 text = "O2"
+metadata/_edit_use_anchors_ = true
 
 [connection signal="value_changed" from="FuelSlider" to="." method="_on_fuel_slider_value_changed"]
 [connection signal="value_changed" from="Heat" to="." method="_on_heat_value_changed"]

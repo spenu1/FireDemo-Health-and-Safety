@@ -13,6 +13,7 @@ config_version=5
 config/name="Fire Demonstration"
 run/main_scene="uid://dixaa0vo77e2y"
 config/features=PackedStringArray("4.6", "GL Compatibility")
+boot_splash/bg_color=Color(0.39071628, 0.0017119145, 0.660833, 1)
 config/icon="res://icon.svg"
 
 [display]
@@ -20,6 +21,10 @@ config/icon="res://icon.svg"
 window/size/viewport_width=1080
 window/size/viewport_height=1080
 window/stretch/mode="viewport"
+
+[gui]
+
+theme/default_font_multichannel_signed_distance_field=true
 
 [physics]
 

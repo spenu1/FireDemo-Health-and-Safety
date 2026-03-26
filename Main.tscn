@@ -7,7 +7,7 @@
 [ext_resource type="Texture2D" uid="uid://d38uxsxubdyqn" path="res://BallSprite.png" id="3_3dxm6"]
 
 [sub_resource type="Gradient" id="Gradient_3dxm6"]
-offsets = PackedFloat32Array(0.40250698, 1)
+offsets = PackedFloat32Array(0.15734266, 1)
 colors = PackedColorArray(1, 0.5647059, 0, 1, 1, 0, 0, 1)
 
 [sub_resource type="GradientTexture1D" id="GradientTexture1D_lgr22"]
@@ -15,7 +15,7 @@ gradient = SubResource("Gradient_3dxm6")
 
 [sub_resource type="Curve" id="Curve_fos0i"]
 _limits = [0.0, 2.0, 0.0, 1.0]
-_data = [Vector2(0.27040818, 1.3961546), 0.0, 0.0, 0, 0, Vector2(1, 0.010279655), -1.899521, 0.0, 1, 0]
+_data = [Vector2(0.27884614, 1.0941936), 0.0, 0.0, 0, 0, Vector2(1, 0.010279655), -1.5030273, 0.0, 1, 0]
 point_count = 2
 
 [sub_resource type="CurveTexture" id="CurveTexture_3dxm6"]
@@ -24,7 +24,7 @@ curve = SubResource("Curve_fos0i")
 [sub_resource type="ParticleProcessMaterial" id="ParticleProcessMaterial_uu6xs"]
 particle_flag_disable_z = true
 emission_shape = 3
-emission_box_extents = Vector3(27.89, 7.545, 1)
+emission_box_extents = Vector3(16.315, 7.545, 1)
 angle_min = 1.0728835e-05
 angle_max = 1.0728835e-05
 direction = Vector3(0, -1, 0)
@@ -40,8 +40,23 @@ hue_variation_min = -2.2351742e-08
 hue_variation_max = 0.06999998
 turbulence_noise_scale = 10.0
 
+[sub_resource type="Gradient" id="Gradient_fos0i"]
+colors = PackedColorArray(1, 1, 1, 1, 0, 0, 0, 1)
+
+[sub_resource type="GradientTexture2D" id="GradientTexture2D_3dxm6"]
+gradient = SubResource("Gradient_fos0i")
+fill = 1
+fill_from = Vector2(0.5, 0.5)
+fill_to = Vector2(0.03846154, 0.67094016)
+
 [node name="Node2D" type="Node2D" unique_id=561405790]
 script = ExtResource("1_cm0pq")
+
+[node name="ColorRect" type="ColorRect" parent="." unique_id=1190984734]
+offset_left = 308.0
+offset_right = 792.0
+offset_bottom = 539.0
+color = Color(0.3019608, 0.3019608, 0.3019608, 1)
 
 [node name="LogClipart" type="Sprite2D" parent="." unique_id=1822968826]
 position = Vector2(546, 461)
@@ -51,25 +66,33 @@ region_enabled = true
 region_rect = Rect2(60.446045, 178.82672, 693.3076, 442.23322)
 
 [node name="GPUParticles2D" type="GPUParticles2D" parent="LogClipart" unique_id=13362136]
-position = Vector2(2.5477695, -168.22386)
+position = Vector2(17.834538, -168.22386)
 scale = Vector2(10.739731, 10.837612)
 emitting = false
-amount = 30
+amount = 60
 texture = ExtResource("3_3dxm6")
 explosiveness = 0.03
 process_material = SubResource("ParticleProcessMaterial_uu6xs")
 script = ExtResource("2_r0du0")
 
 [node name="Control" parent="." unique_id=699872417 instance=ExtResource("2_uu6xs")]
+clip_children = 2
 anchors_preset = 0
 anchor_right = 0.0
 anchor_bottom = 0.0
-offset_left = 525.0
-offset_top = 761.0
-offset_right = 525.0
-offset_bottom = 761.0
+offset_left = 635.0
+offset_top = 789.0
+offset_right = 635.0
+offset_bottom = 789.0
 grow_horizontal = 1
 grow_vertical = 1
+
+[node name="FireLight" type="PointLight2D" parent="." unique_id=1069605359]
+position = Vector2(552, 292.5)
+scale = Vector2(6.4062505, 7.578125)
+color = Color(0.9627653, 0.30794448, 1.92523e-07, 1)
+energy = 2.0
+texture = SubResource("GradientTexture2D_3dxm6")
 
 [connection signal="fuelUpdated" from="Control" to="." method="_on_control_fuel_updated"]
 [connection signal="heatUpdated" from="Control" to="." method="_on_control_heat_updated"]
